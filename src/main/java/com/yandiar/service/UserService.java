@@ -33,7 +33,7 @@ public class UserService {
 
     @Cacheable("user")
     public Optional<User> getUserById(long id) {
-        doLongRunningTask();
+        doLongRunningTask(); //set delay processing
 
         return userRepository.findById(id);
     }
